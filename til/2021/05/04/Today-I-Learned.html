@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -93,7 +93,46 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="may-4th-2021">May 4th, 2021</h1>
+    <h1 id="may-5th-2021">May 5th, 2021</h1>
+<ul>
+  <li>According to data collected by the HTTP Archive, videos, images, &amp; JavaScript are the biggest network energy hogs.</li>
+  <li>Online ads make up 10% of the internets carbon impact</li>
+  <li>The “pull” design principle means dont load data until the user requests it, via interaction or navigation</li>
+  <li>Default Effect is a psychological trick to encourage certain user behaviors. Often used nefariously but could be use to encourage better sustainable decisions.</li>
+  <li>The 2011 SunShot initiative started by Obama’s DOE helped bring down Solar costs to competitive levels in &lt; 10 years and reached cheaper prices 3 years ahead of schedule</li>
+  <li>Cruise lines register their companines in countries with loose labor laws. (source: Wendover Productions, The Insane Logistics of Shutting Down the cruise industry)</li>
+  <li>CLUT stands for Color Look Up Tables.</li>
+  <li>The Swedish scientist Svante Arrhenius first wrote about the link between carbon dioxide and global temperatures via the greenhouse effect in 1896.</li>
+</ul>
+
+<h2 id="ultimate-gameboy-talk">Ultimate GameBoy Talk</h2>
+<ul>
+  <li>GameBoy only uses 4 colors</li>
+  <li>Original GameBoy only had 8KB of RAM!!</li>
+  <li>Some games used MBCs(memory bank controllers) to play larger games on the GameBoy</li>
+</ul>
+
+<h2 id="python-concurrency-the-trciky-bits">Python Concurrency: The Trciky Bits</h2>
+<ul>
+  <li>The Python GIL only allows one thread to run at any given time</li>
+  <li>Because of the GIL, CPU bound tasks running on individual threads will slow each other down (theres a lot of blocking &amp; resource starvation)</li>
+  <li>Using threads does add additional speedups for I/O workloads</li>
+  <li>You can simulate non-cpu bound task in Python using time.sleep()</li>
+  <li>Python GIL will priotize CPU workloads over I/O workloads. This is unique to Python’s GIL since OS’s prefer shorter tasks</li>
+  <li>A thread is always contained in a process, and each process contains one or more threads. Threads in the same process can share memory which means they can easily communicate and write to common data structures.</li>
+  <li>Processes can generalize across CPU cores but threads can only run on a single core</li>
+  <li>A common workaround to running code in Parallel in Python is to spawn several processes</li>
+  <li>You can write C code that escapes the constraints of the GIL</li>
+  <li>Processes have a bigger overhead compared to threads due to shared data/program state</li>
+  <li>Procceses are not constrainted to run on a single CPU so you can execute CPU bound tasks in parallel on different cores</li>
+  <li>Do not use threads for CPU workloads and do not use Processes for IO workloads. You will see decreased performance</li>
+  <li>Reading/writing data to disk is not CPU work its IO work!</li>
+  <li>Threads are more memory efficient then processes</li>
+  <li>Pre-Emptive Multitasking is when the OS automately switches &amp; interleaves thread events for you</li>
+  <li>Cooperative Multitasking is when each thread announces when they want to switch. You can use coroutines to achieve this</li>
+</ul>
+
+<h1 id="may-4th-2021">May 4th, 2021</h1>
 <ul>
   <li>Endocrine Disruptors are chemicals that mimic the body’s hormones which can fool our cells in acting in ways it was not supposed to</li>
   <li>Those endocrine disruptors which are found everywhere in our modern world could be causing the decline in sperm seen throughout much of the Western World</li>

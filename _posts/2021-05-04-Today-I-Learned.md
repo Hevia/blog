@@ -21,7 +21,7 @@ sticky_rank: 1
 - Original GameBoy only had 8KB of RAM!!
 - Some games used MBCs(memory bank controllers) to play larger games on the GameBoy
 
-## Python Concurrency: The Trciky Bits
+## Python Concurrency: The Tricky Bits
 - The Python GIL only allows one thread to run at any given time
 - Because of the GIL, CPU bound tasks running on individual threads will slow each other down (theres a lot of blocking & resource starvation)
 - Using threads does add additional speedups for I/O workloads

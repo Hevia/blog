@@ -5,6 +5,55 @@ categories: [TIL]
 title: Today I Learned
 sticky_rank: 1
 ---
+# May 10th, 2021
+- Inside of Cacti fluid are sugars called mucilage which can bind with contaiminants in water & help filter it. It was later developed into a powder which is used in many parts of the world to produce clean drinking water. Norma Alcantar is the scientists who discovered this after being told by her Grandmother how they would boil water with a cactus part a kids to help clean it.
+- [Shaken Baby Syndrome](https://en.wikipedia.org/wiki/Shaken_baby_syndrome)
+- In animal studies, a diet with 25% total calories coming from added sugars resulted in a 2-fold increase in total mortality rate
+- Only use neutral oils when seasoning your cast iron (i.e: vegetabe, canola, sunflower, or shortening)
+- 10 passes through coarse & 10 passes through fine are a good method to give your knives a quick sharp
+- Don't clean your wetstone until AFTER you are sharpening all your knives, it helps with sharpening
+- Use Bar Keepers Friend to clean your stainless steel pots & pan (use a glove & wash in the grain direction of the steel, which is normally in circles)
+- Sharpen your knife with a wetstone 1-2 times a year
+- A Solution of 1:1 water to white vinegar is a good regular cleaning of your board + a coat of food grade mineral oil
+
+## The lost art of reading nature's signs by Tristan Gooley
+- If you smell smoke in the air on a cold morning, the likely cause is a temperature inversion
+- Temperature inversions increase the likelihood of fogs in the morning/evenings
+- Rayleigh Scattering is responsible for making things that are further away appear lighter while making things close to you appear darker
+
+
+## [Don't Talk to the Police](https://youtu.be/d-7o9xYp7eE)
+- What you tell the police CANNOT be used to HELP you (Recall: Anything you say CAN and WILL be used AGAINST you)
+- There are over 10,000 crimes on US Federal Code
+- Even if you are guilty, do not talk to the police
+- If you are innocent and only tell the truth, you will *always* give some information that will convict you. In some cases the police will even misrecall the testimony or not recall it fully
+
+## [How Developers Can Create Personal Brands Through Online Presence](https://youtu.be/frWlMUv59kY)
+- Sales Safari
+- 3 things
+    - Your goals
+    - Your audience & value proposition
+    - Your culture add
+- Personal Website
+    - Maintain a personal website & link back to it on all your online profiles
+    - On your contact page list the types of reasons you do/dont want to be contacted
+- Online Profiles
+    - Bio
+        - Use the same bio + avatar on every active online profile
+        - Use your bio to describe your value prop
+        - Link any of the projects of yours you want people to check out
+    - Github profile READMEs
+        - Take advantage of them! They're useful!
+        - Use pinned repos of the ones you want folks to check out
+    - Pinned tweet
+        - Think of it as the first result of a Google search query
+        - People rarely scroll beyond a few tweets
+        - You can make your pinned tweet the start of a thread 
+
+# May 7th, 2021
+- Indingeous tribes in the PNW used aquacultures to harvest clams along the shores
+- Indingeous tribes are theorized to have been in the PNW region for the past 10,000 years
+
 
 # May 5th, 2021
 - According to data collected by the HTTP Archive, videos, images, & JavaScript are the biggest network energy hogs.

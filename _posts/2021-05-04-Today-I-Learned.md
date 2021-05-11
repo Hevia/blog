@@ -5,6 +5,25 @@ categories: [TIL]
 title: Today I Learned
 sticky_rank: 1
 ---
+
+# May 11th, 2021
+- There are three methods corporations reduce GHG emissions
+    - Direct abatement: direct elimination of GHGs within a company’s value chain
+    - Neutralisation: removal of GHGs elsewhere to counterbalance own emission sources
+    - Compensation: purchase of offsets to compensate GHG emissions
+- Thermal Desalination : Heat up water to remove 
+- Reverse Osmosis : Filter water through a membrane (but can be an inefficient proess)
+- Desalination plants account for up to 76 million tons of CO2 a year
+- The salt water brine byproduct from desalination when pumped back into the ocean sinks to the bottom and can damage seafloor ecosystems 
+- It is theorized that the leftover salt water brine can be used in manufacturing
+
+## [Decoding the Weather Machine](https://www.pbs.org/wgbh/nova/video/decoding-the-weather-machine/)
+- Infrared radiation is emitted by sources of heat 
+- The composition of the atmosphere is what largely determines the temperature of Earth (we have known about this for almost 200+ years)
+- John Tyndall discovered in 1859 that Carbon Dixoide traps heat 
+
+## [Masters of the Pacific Coast: The Tribes of the American Northwest 2/2](https://youtu.be/RO2jRt8NqcY)
+
 # May 10th, 2021
 - Inside of Cacti fluid are sugars called mucilage which can bind with contaiminants in water & help filter it. It was later developed into a powder which is used in many parts of the world to produce clean drinking water. Norma Alcantar is the scientists who discovered this after being told by her Grandmother how they would boil water with a cactus part a kids to help clean it.
 - [Shaken Baby Syndrome](https://en.wikipedia.org/wiki/Shaken_baby_syndrome)

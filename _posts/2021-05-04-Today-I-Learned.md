@@ -29,11 +29,13 @@ sticky_rank: 1
 - If you are innocent and only tell the truth, you will *always* give some information that will convict you. In some cases the police will even misrecall the testimony or not recall it fully
 
 ## [How Developers Can Create Personal Brands Through Online Presence](https://youtu.be/frWlMUv59kY)
-- Sales Safari
-- 3 things
-    - Your goals
-    - Your audience & value proposition
-    - Your culture add
+- Good marketing is centered around establishing value for free first, before asking for money. 
+- Bad marketing is when you try to sell the brand not the product
+- Sales Safari is when you scout online communities for keywords, common painpoints, and ideas to help pitch or create your content
+- 3 things you need to figure out when creating developer content
+    - What are your goals?
+    - Who is your audience (be very specific)? & What is your value proposition to them?
+    - What culture are you adding to this space
 - Personal Website
     - Maintain a personal website & link back to it on all your online profiles
     - On your contact page list the types of reasons you do/dont want to be contacted

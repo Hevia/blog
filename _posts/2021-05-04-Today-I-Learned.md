@@ -23,6 +23,7 @@ sticky_rank: 1
 - John Tyndall discovered in 1859 that Carbon Dixoide traps heat 
 
 ## [Masters of the Pacific Coast: The Tribes of the American Northwest 2/2](https://youtu.be/RO2jRt8NqcY)
+- There is a bit *too* much to write out, instead this 2 part documentary series is very much worth watching
 
 # May 10th, 2021
 - Inside of Cacti fluid are sugars called mucilage which can bind with contaiminants in water & help filter it. It was later developed into a powder which is used in many parts of the world to produce clean drinking water. Norma Alcantar is the scientists who discovered this after being told by her Grandmother how they would boil water with a cactus part a kids to help clean it.

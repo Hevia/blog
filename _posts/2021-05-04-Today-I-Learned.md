@@ -6,6 +6,25 @@ title: Today I Learned
 sticky_rank: 1
 ---
 
+# May 13th, 2021
+- Service Workers operate on threads separate from main
+- Service workers required HTTPS to be used
+- ServiceWorkers + CacheStorage is what helps lead to such huge performance gains
+- You can invalidate an old service worker cache by adopting a new name
+- The cache used by service workers is separate from the browser cache
+- iframes use their own browsing context which requires increased memory from the browser
+- Service Workers are excuted in a ServiceWorkerGlobalScope context that have no access to DOM
+- Service workers cannot be used when the user is in private browsing mode
+- You have control over the cache lifetime for your site/service workers
+- You can register service workers to listen for certain events (such as fetch) and whenever the client emits that event, the service workers will intercept the request & perform the work. You can then cache the result
+- You can have the client install new service workers by also updating the associated cache version
+- ServiceWorkers also enable push notifications & background sync APIs
+
+# May 12th, 2021
+## [Asynchronous Tasks with FastAPI and Celery](https://testdriven.io/blog/fastapi-and-celery/)
+- Use Celery for tasks that perform heavy computation since FastAPI's Background tasks runs in the same event loop as your app's requests. Celery also has the benefit of being a managed task queue
+- `celery worker` spins up a celery worker
+
 # May 11th, 2021
 - There are three methods corporations reduce GHG emissions
     - Direct abatement: direct elimination of GHGs within a company’s value chain

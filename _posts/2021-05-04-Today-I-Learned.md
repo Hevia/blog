@@ -6,7 +6,7 @@ title: Today I Learned
 sticky_rank: 1
 ---
 
-# May 13th, 2021
+# May 13th, 2021 🛴
 - Service Workers operate on threads separate from main
 - Service workers required HTTPS to be used
 - ServiceWorkers + CacheStorage is what helps lead to such huge performance gains
@@ -20,12 +20,12 @@ sticky_rank: 1
 - You can have the client install new service workers by also updating the associated cache version
 - ServiceWorkers also enable push notifications & background sync APIs
 
-# May 12th, 2021
+# May 12th, 2021 🦼
 ## [Asynchronous Tasks with FastAPI and Celery](https://testdriven.io/blog/fastapi-and-celery/)
 - Use Celery for tasks that perform heavy computation since FastAPI's Background tasks runs in the same event loop as your app's requests. Celery also has the benefit of being a managed task queue
 - `celery worker` spins up a celery worker
 
-# May 11th, 2021
+# May 11th, 2021 🚁
 - There are three methods corporations reduce GHG emissions
     - Direct abatement: direct elimination of GHGs within a company’s value chain
     - Neutralisation: removal of GHGs elsewhere to counterbalance own emission sources
@@ -44,7 +44,7 @@ sticky_rank: 1
 ## [Masters of the Pacific Coast: The Tribes of the American Northwest 2/2](https://youtu.be/RO2jRt8NqcY)
 - There is a bit *too* much to write out, instead this 2 part documentary series is very much worth watching
 
-# May 10th, 2021
+# May 10th, 2021 🚦
 - Inside of Cacti fluid are sugars called mucilage which can bind with contaiminants in water & help filter it. It was later developed into a powder which is used in many parts of the world to produce clean drinking water. Norma Alcantar is the scientists who discovered this after being told by her Grandmother how they would boil water with a cactus part a kids to help clean it.
 - [Shaken Baby Syndrome](https://en.wikipedia.org/wiki/Shaken_baby_syndrome)
 - In animal studies, a diet with 25% total calories coming from added sugars resulted in a 2-fold increase in total mortality rate
@@ -59,7 +59,6 @@ sticky_rank: 1
 - If you smell smoke in the air on a cold morning, the likely cause is a temperature inversion
 - Temperature inversions increase the likelihood of fogs in the morning/evenings
 - Rayleigh Scattering is responsible for making things that are further away appear lighter while making things close to you appear darker
-
 
 ## [Don't Talk to the Police](https://youtu.be/d-7o9xYp7eE)
 - What you tell the police CANNOT be used to HELP you (Recall: Anything you say CAN and WILL be used AGAINST you)
@@ -91,12 +90,11 @@ sticky_rank: 1
         - People rarely scroll beyond a few tweets
         - You can make your pinned tweet the start of a thread 
 
-# May 7th, 2021
+# May 7th, 2021 🚅
 - Indingeous tribes in the PNW used aquacultures to harvest clams along the shores
 - Indingeous tribes are theorized to have been in the PNW region for the past 10,000 years
 
-
-# May 5th, 2021
+# May 5th, 2021 🚂
 - According to data collected by the HTTP Archive, videos, images, & JavaScript are the biggest network energy hogs.
 - Online ads make up 10% of the internets carbon impact
 - The "pull" design principle means dont load data until the user requests it, via interaction or navigation
@@ -131,7 +129,7 @@ sticky_rank: 1
 
 
 
-# May 4th, 2021
+# May 4th, 2021 🛺
 - Endocrine Disruptors are chemicals that mimic the body's hormones which can fool our cells in acting in ways it was not supposed to
 - Those endocrine disruptors which are found everywhere in our modern world could be causing the decline in sperm seen throughout much of the Western World
 - About 350k deaths in America can be attributed to Air Pollution each year

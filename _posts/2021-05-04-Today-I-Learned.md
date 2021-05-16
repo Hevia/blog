@@ -6,7 +6,95 @@ title: Today I Learned
 sticky_rank: 1
 ---
 
-# May 5th, 2021
+# May 13th, 2021 🛴
+- Service Workers operate on threads separate from main
+- Service workers required HTTPS to be used
+- ServiceWorkers + CacheStorage is what helps lead to such huge performance gains
+- You can invalidate an old service worker cache by adopting a new name
+- The cache used by service workers is separate from the browser cache
+- iframes use their own browsing context which requires increased memory from the browser
+- Service Workers are excuted in a ServiceWorkerGlobalScope context that have no access to DOM
+- Service workers cannot be used when the user is in private browsing mode
+- You have control over the cache lifetime for your site/service workers
+- You can register service workers to listen for certain events (such as fetch) and whenever the client emits that event, the service workers will intercept the request & perform the work. You can then cache the result
+- You can have the client install new service workers by also updating the associated cache version
+- ServiceWorkers also enable push notifications & background sync APIs
+
+# May 12th, 2021 🦼
+## [Asynchronous Tasks with FastAPI and Celery](https://testdriven.io/blog/fastapi-and-celery/)
+- Use Celery for tasks that perform heavy computation since FastAPI's Background tasks runs in the same event loop as your app's requests. Celery also has the benefit of being a managed task queue
+- `celery worker` spins up a celery worker
+
+# May 11th, 2021 🚁
+- There are three methods corporations reduce GHG emissions
+    - Direct abatement: direct elimination of GHGs within a company’s value chain
+    - Neutralisation: removal of GHGs elsewhere to counterbalance own emission sources
+    - Compensation: purchase of offsets to compensate GHG emissions
+- Thermal Desalination : Heat up water to remove 
+- Reverse Osmosis : Filter water through a membrane (but can be an inefficient proess)
+- Desalination plants account for up to 76 million tons of CO2 a year
+- The salt water brine byproduct from desalination when pumped back into the ocean sinks to the bottom and can damage seafloor ecosystems 
+- It is theorized that the leftover salt water brine can be used in manufacturing
+
+## [Decoding the Weather Machine](https://www.pbs.org/wgbh/nova/video/decoding-the-weather-machine/)
+- Infrared radiation is emitted by sources of heat 
+- The composition of the atmosphere is what largely determines the temperature of Earth (we have known about this for almost 200+ years)
+- John Tyndall discovered in 1859 that Carbon Dixoide traps heat 
+
+## [Masters of the Pacific Coast: The Tribes of the American Northwest 2/2](https://youtu.be/RO2jRt8NqcY)
+- There is a bit *too* much to write out, instead this 2 part documentary series is very much worth watching
+
+# May 10th, 2021 🚦
+- Inside of Cacti fluid are sugars called mucilage which can bind with contaiminants in water & help filter it. It was later developed into a powder which is used in many parts of the world to produce clean drinking water. Norma Alcantar is the scientists who discovered this after being told by her Grandmother how they would boil water with a cactus part a kids to help clean it.
+- [Shaken Baby Syndrome](https://en.wikipedia.org/wiki/Shaken_baby_syndrome)
+- In animal studies, a diet with 25% total calories coming from added sugars resulted in a 2-fold increase in total mortality rate
+- Only use neutral oils when seasoning your cast iron (i.e: vegetabe, canola, sunflower, or shortening)
+- 10 passes through coarse & 10 passes through fine are a good method to give your knives a quick sharp
+- Don't clean your wetstone until AFTER you are sharpening all your knives, it helps with sharpening
+- Use Bar Keepers Friend to clean your stainless steel pots & pan (use a glove & wash in the grain direction of the steel, which is normally in circles)
+- Sharpen your knife with a wetstone 1-2 times a year
+- A Solution of 1:1 water to white vinegar is a good regular cleaning of your board + a coat of food grade mineral oil
+
+## The lost art of reading nature's signs by Tristan Gooley
+- If you smell smoke in the air on a cold morning, the likely cause is a temperature inversion
+- Temperature inversions increase the likelihood of fogs in the morning/evenings
+- Rayleigh Scattering is responsible for making things that are further away appear lighter while making things close to you appear darker
+
+## [Don't Talk to the Police](https://youtu.be/d-7o9xYp7eE)
+- What you tell the police CANNOT be used to HELP you (Recall: Anything you say CAN and WILL be used AGAINST you)
+- There are over 10,000 crimes on US Federal Code
+- Even if you are guilty, do not talk to the police
+- If you are innocent and only tell the truth, you will *always* give some information that will convict you. In some cases the police will even misrecall the testimony or not recall it fully
+
+## [How Developers Can Create Personal Brands Through Online Presence](https://youtu.be/frWlMUv59kY)
+- Good marketing is centered around establishing value for free first, before asking for money. 
+- Bad marketing is when you try to sell the brand not the product
+- Sales Safari is when you scout online communities for keywords, common painpoints, and ideas to help pitch or create your content
+- 3 things you need to figure out when creating developer content
+    - What are your goals?
+    - Who is your audience (be very specific)? & What is your value proposition to them?
+    - What culture are you adding to this space
+- Personal Website
+    - Maintain a personal website & link back to it on all your online profiles
+    - On your contact page list the types of reasons you do/dont want to be contacted
+- Online Profiles
+    - Bio
+        - Use the same bio + avatar on every active online profile
+        - Use your bio to describe your value prop
+        - Link any of the projects of yours you want people to check out
+    - Github profile READMEs
+        - Take advantage of them! They're useful!
+        - Use pinned repos of the ones you want folks to check out
+    - Pinned tweet
+        - Think of it as the first result of a Google search query
+        - People rarely scroll beyond a few tweets
+        - You can make your pinned tweet the start of a thread 
+
+# May 7th, 2021 🚅
+- Indingeous tribes in the PNW used aquacultures to harvest clams along the shores
+- Indingeous tribes are theorized to have been in the PNW region for the past 10,000 years
+
+# May 5th, 2021 🚂
 - According to data collected by the HTTP Archive, videos, images, & JavaScript are the biggest network energy hogs.
 - Online ads make up 10% of the internets carbon impact
 - The "pull" design principle means dont load data until the user requests it, via interaction or navigation
@@ -41,7 +129,7 @@ sticky_rank: 1
 
 
 
-# May 4th, 2021
+# May 4th, 2021 🛺
 - Endocrine Disruptors are chemicals that mimic the body's hormones which can fool our cells in acting in ways it was not supposed to
 - Those endocrine disruptors which are found everywhere in our modern world could be causing the decline in sperm seen throughout much of the Western World
 - About 350k deaths in America can be attributed to Air Pollution each year

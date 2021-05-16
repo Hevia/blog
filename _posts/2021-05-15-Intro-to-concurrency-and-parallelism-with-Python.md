@@ -1,8 +1,8 @@
 ---
 layout: post
-description: A brief introduction to the concepts of concurrent & parallel programming
+description: A rapid introduction to some of the most useful set of programming skills
 categories: [python, concurrency, parallelism, multithreading]
-title: A Rapid Introduction to Concurrency & Parallelism in Python
+title: Concurrency & Parallelism with Python in 5 minutes
 ---
 
 

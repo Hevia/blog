@@ -2,7 +2,7 @@
 layout: post
 description: A brief introduction to the concepts of concurrent & parallel programming
 categories: [python, concurrency, parallelism, multithreading]
-title: A rapid introduction to Concurrency & Parallelism in Python
+title: A Rapid Introduction to Concurrency & Parallelism in Python
 ---
 
 

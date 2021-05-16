@@ -29,10 +29,10 @@ When starting out in this space, these two terms can often cause some confusion.
 For a more descriptive analogy. You can think of parallelism as a grocery store with multiple checkout lanes. 
 Customers (the code) don't all have to use the same lane to have their goods processed. You can think of concurrency, as yourself! 
 Maybe while you wait for your coffee to brew, you read the bird app, or while your code is building you go off and reply to emails  
+&nbsp;
 
 
-
-If neither the analogy above or the table help illustrate the difference. Here is a crude MS Paint visualisation that might help (I meant to originally put more effort, but I kept procrastinating on this post so this is the best for now)  
+Here is a crude MS Paint visualisation that might help (I meant to originally put more effort, but I kept procrastinating on this post so this is the best for now)  
 
 
 ![MS Paint drawing showcasing Concurrency vs Parallelism](./assets/concurrency_parallelism_mspaint.png "Diagram")

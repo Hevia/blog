@@ -16,8 +16,8 @@ When starting out in this space, these two terms can often cause some confusion.
 
 | Paradigm      | Definition |
 | ----------- | ----------- |
-| Concurrency      | The process of interleaving non-related tasks **one at a time** within bits of code (tasks being individual pieces of work i.e: adding together two numbers or sending a network request). |
-| Parallelism   | Exectuing several or more bits of code at the **same time.**|  
+| Concurrency      | The process of interleaving non-related tasks one at a time within bits of code (tasks being individual pieces of work i.e: adding together two numbers or sending a network request). |
+| Parallelism   | Exectuing several or more bits of code at the same time.|  
 &nbsp; 
 
 With Concurrency tasks do not need to occur one after the other, oftentime your progam will rapidly switch between the tasks. Giving the illusion that multiple things are occuring at the same time.

@@ -110,11 +110,26 @@ In this series of short posts I am hoping we can distill these topics so you can
 <h2 id="concurrency-vs-parallelism">Concurrency vs Parallelism</h2>
 <p>When starting out in this space, these two terms can often cause some confusion. So let’s quickly define them:</p>
 
-<p>| Paradigm      | Definition |
-| ———– | ———– |
-| Concurrency      | The process of interleaving non-related tasks one at a time within bits of code (tasks being individual pieces of work i.e: adding together two numbers or sending a network request). |
-| Parallelism   | Exectuing several or more bits of code at the same time.|<br />
- </p>
+<table>
+  <thead>
+    <tr>
+      <th>Paradigm</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Concurrency</td>
+      <td>The process of interleaving non-related tasks one at a time within bits of code (tasks being individual pieces of work i.e: adding together two numbers or sending a network request).</td>
+    </tr>
+    <tr>
+      <td>Parallelism</td>
+      <td>Exectuing several or more bits of code at the same time.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p> </p>
 
 <p>With Concurrency tasks do not need to occur one after the other, oftentime your progam will rapidly switch between the tasks. Giving the illusion that multiple things are occuring at the same time.</p>
 

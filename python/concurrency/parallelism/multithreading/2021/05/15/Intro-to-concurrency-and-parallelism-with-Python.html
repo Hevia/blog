@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Concurrency &amp; Parallelism with Python in 5 minutes | SNAKES!</title>
+<title>Concurrency &amp; Parallelism with Python in 5 minutes | Programming &amp; Public Policy</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Concurrency &amp; Parallelism with Python in 5 minutes" />
 <meta property="og:locale" content="en_US" />
@@ -12,13 +12,13 @@
 <meta property="og:description" content="A rapid introduction to some of the most useful set of programming skills" />
 <link rel="canonical" href="https://hevia.github.io/blog/python/concurrency/parallelism/multithreading/2021/05/15/Intro-to-concurrency-and-parallelism-with-Python.html" />
 <meta property="og:url" content="https://hevia.github.io/blog/python/concurrency/parallelism/multithreading/2021/05/15/Intro-to-concurrency-and-parallelism-with-Python.html" />
-<meta property="og:site_name" content="SNAKES!" />
+<meta property="og:site_name" content="Programming &amp; Public Policy" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-05-15T00:00:00-05:00" />
 <script type="application/ld+json">
 {"url":"https://hevia.github.io/blog/python/concurrency/parallelism/multithreading/2021/05/15/Intro-to-concurrency-and-parallelism-with-Python.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://hevia.github.io/blog/python/concurrency/parallelism/multithreading/2021/05/15/Intro-to-concurrency-and-parallelism-with-Python.html"},"headline":"Concurrency &amp; Parallelism with Python in 5 minutes","dateModified":"2021-05-15T00:00:00-05:00","datePublished":"2021-05-15T00:00:00-05:00","description":"A rapid introduction to some of the most useful set of programming skills","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hevia.github.io/blog/feed.xml" title="SNAKES!" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hevia.github.io/blog/feed.xml" title="Programming &amp; Public Policy" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
 <script>
@@ -53,7 +53,7 @@ window.onload = wrap_img;
 </head>
 <body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">SNAKES!</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Programming &amp; Public Policy</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -107,92 +107,36 @@ window.onload = wrap_img;
 but you can spend your entire career in this space! There are a lot of exciting things to learn, but newcomers can often feel intimadated by the steep curve. 
 In this series of short posts I am hoping we can distill these topics so you can start writing more performant Python 🚀🐍</p>
 
-<p> </p>
-
 <h2 id="concurrency-vs-parallelism">Concurrency vs Parallelism</h2>
 <p>When starting out in this space, these two terms can often cause some confusion. So let’s quickly define them:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Paradigm</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Concurrency</td>
-      <td>The process of interleaving individual tasks one at a time within bits of code (tasks being individual pieces of work i.e: adding together two numbers or sending a network request).</td>
-    </tr>
-    <tr>
-      <td>Parallelism</td>
-      <td>Exectuing several or more bits of code at the same time.</td>
-    </tr>
-  </tbody>
-</table>
+<p>| Paradigm      | Definition |
+| ———– | ———– |
+| Concurrency      | The process of interleaving non-related tasks <strong>one at a time</strong> within bits of code (tasks being individual pieces of work i.e: adding together two numbers or sending a network request).** |
+| Parallelism   | Exectuing several or more bits of code at the <strong>same time.</strong>|<br />
+ </p>
 
-<p> </p>
+<p>**Tasks do not need to occur one after the other, oftentime your progam will rapidly switch between the tasks. Giving the illusion that multiple things are occuring at the same time.</p>
 
 <p>For a more descriptive analogy. You can think of parallelism as a grocery store with multiple checkout lanes. 
 Customers (the code) don’t all have to use the same lane to have their goods processed. You can think of concurrency, as yourself! 
-Maybe while you wait for your coffee to brew, you read the bird app, or while your code is building you go off and reply to emails<br />
- </p>
+Maybe while you wait for your coffee to brew, you read the bird app, or while your code is building you go off and reply to emails</p>
 
-<p>Here is a crude MS Paint visualisation that might help (I meant to originally put more effort, but I kept procrastinating on this post so this is the best for now)</p>
+<p>It should be noted that you can have concurrency &amp; parallelism at the same time. The terms are not mutually exclusive, however we will not be covering that in this post (You can explore this with the 2nd exercise of the Dive Deeper section)</p>
 
-<p><img src="./assets/concurrency_parallelism_mspaint.png" alt="MS Paint drawing showcasing Concurrency vs Parallelism" title="Diagram" /></p>
-
-<p> </p>
-
-<h1 id="cpu-vs-io-workloads">CPU vs IO workloads</h1>
-<p>To fully take advantage of the performance benefits that come with concurrent/parallel code. You need to know when to use what technique. Luckily figuring out isn’t too bad. 
-Generally the advice for most situations goes like this:</p>
-
-<ul>
-  <li>
-    <p>For CPU workloads, you’ll want to use Parallelism/Processes </p>
-  </li>
-  <li>
-    <p>For IO workloads, you’ll want to use Concurrency/Threads</p>
-  </li>
-</ul>
-
-<p>But what exactly is the distinction between these two workloads? Back to the terminology!</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Workload</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CPU</td>
-      <td>Math, running methods on some data, physics simulation, running game AI/ML.</td>
-    </tr>
-    <tr>
-      <td>IO</td>
-      <td>Reading/Writing data from disk, web apps, APIs, sending/reciving network data.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p> </p>
-
-<h1 id="threads">Threads</h1>
+<h1 id="threads-">Threads 🧵</h1>
 <p>You can think of threads as the most basic block of where computation occurs. All your code is ran on a thread (which is inside of a process), and while it isnt threads all the way down. You don’t go any lower then this.</p>
 
 <p>Quick example with threads:</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">threading</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
-<span class="k">def</span> <span class="nf">thread_ripper_5000</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">thread_ripper_5000</span><span class="p">(</span><span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
     <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Rip n Tear"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">f"Rip n Tear: </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">thread_ripper_5000</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">thread_ripper_5000</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">thread_ripper_5000</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">thread_ripper_5000</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,))</span>
 <span class="n">threads</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">_thread</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
@@ -214,23 +158,21 @@ The GIL is saving your future self a lot of time.</p>
 <p>If you want to learn more about the GIL, check out: <a href="https://www.youtube.com/watch?v=Obt-vMVdM8s">Understanding the Python GIL by David Beazley</a>
  </p>
 
-<p> </p>
-
 <h3 id="sidebar-what-is-a-lock">Sidebar: What is a Lock?</h3>
 <p>A <strong>Lock</strong> is a quite literally what it means. It is an object that ensures only one thread can do X thing at a time.(It “locks” sections of code so nobody else can reach it) Locks go far beyond the GIL! If you want to ensure only one thread (hint hint this is a future post 😉) writes to a file or data structure at a time, you can use a lock! You’ll often hear locking referred to as <strong>Mutual Exclusion</strong>.</p>
 
-<h1 id="processes">Processes</h1>
+<h1 id="processes-">Processes 💿</h1>
 <p>Every time you run Python it spawns its own <em>process</em>. The process handles state &amp; lots of other things you the programmer doesn’t need to worry about. As stated above each process comes with its own GIL. Plus with the <code class="language-plaintext highlighter-rouge">multiprocessing</code> library, you can spawn additional Python procceses in your code &amp; give them code to execute</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">multiprocessing</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
-<span class="k">def</span> <span class="nf">process_ripper_5000</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">process_ripper_5000</span><span class="p">(</span><span class="n">num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
     <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Process n Compute"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">f"Process n Compute: </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="p">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">process_ripper_5000</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="p">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">process_ripper_5000</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="p">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">process_ripper_5000</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="p">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">process_ripper_5000</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,))</span>
 <span class="n">processes</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">_process</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">:</span>
@@ -240,6 +182,38 @@ The GIL is saving your future self a lot of time.</p>
     <span class="n">_process</span><span class="p">.</span><span class="n">join</span><span class="p">()</span> <span class="c1"># Have our process wrap up work
 </span></code></pre></div></div>
 <p>A good read on writing multiproccessing code: <a href="https://www.cloudcity.io/blog/2019/02/27/things-i-wish-they-told-me-about-multiprocessing-in-python/">Things I Wish They Told Me About Multiprocessing in Python</a></p>
+
+<h1 id="cpu-vs-io-workloads">CPU vs IO workloads</h1>
+<p>To fully take advantage of the performance benefits that come with concurrent/parallel code. You need to know when to use what technique. Luckily figuring out isn’t too bad. 
+Generally the advice for most situations goes like this:</p>
+
+<ul>
+  <li>
+    <p>For CPU workloads, you’ll want to use Parallelism/Processes </p>
+  </li>
+  <li>
+    <p>For IO workloads, you’ll want to use Concurrency/Threads</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Workload</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CPU</td>
+      <td>Math, running methods on some data, physics simulation, running game AI/ML.</td>
+    </tr>
+    <tr>
+      <td>IO</td>
+      <td>Reading/Writing data from disk, web apps, APIs, sending/reciving network data.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h1 id="conclusion">Conclusion</h1>
 <p>This wraps up a brief introduction into the foundational vocabulary we’ll need for future posts. This might seem simple (and it is!). There is a whole <strong>LOT</strong> I didn’t mention or touch, but this introduction should aid in further or deeper dives into related subjects.</p>
@@ -255,20 +229,20 @@ The GIL is saving your future self a lot of time.</p>
 
 <h2 id="diving-deeper">Diving Deeper</h2>
 <p>Besides checking out the references below, if you want to dive deeper into what was covered here, try these ideas:</p>
-<ul>
+<ol>
   <li>Using the example from the Thread section, write some code that performs an I/O task such as getting weather data, reading/writing files, etc.</li>
-  <li>Using the example process code, trying mixing in some threading too!</li>
+  <li>Try spawning several proccesses that also spawn several threads in their own processes!</li>
   <li>Write a function that performs a mathematical sequence (Fibonacci is a popular one). Now write some code that runs the sequence using threads and another using processes. Which is faster? Why?</li>
-</ul>
+</ol>
 
 <h1 id="references">References</h1>
 <ul>
-  <li>https://python.hamel.dev/concurrency/</li>
-  <li>https://realpython.com/python-concurrency/</li>
-  <li>https://www.geeksforgeeks.org/multiprocessing-python-set-1/</li>
-  <li>https://realpython.com/intro-to-python-threading/</li>
-  <li>https://www.cloudcity.io/blog/2019/02/27/things-i-wish-they-told-me-about-multiprocessing-in-python/</li>
-  <li>https://www.youtube.com/watch?v=Obt-vMVdM8s</li>
+  <li><a href="https://python.hamel.dev/concurrency/">Python Concurrency: The Tricky Bits</a></li>
+  <li><a href="https://realpython.com/python-concurrency/">Speed Up Your Python Program With Concurrency</a></li>
+  <li><a href="https://www.geeksforgeeks.org/multiprocessing-python-set-1/">Multiprocessing with Python</a></li>
+  <li><a href="https://realpython.com/intro-to-python-threading/">An Intro to Threading in Python</a></li>
+  <li><a href="https://www.cloudcity.io/blog/2019/02/27/things-i-wish-they-told-me-about-multiprocessing-in-python/">Things I Wish They Told Me About Multiprocessing in Python</a></li>
+  <li><a href="https://www.youtube.com/watch?v=Obt-vMVdM8s">Understanding the Python GIL</a></li>
 </ul>
 
 

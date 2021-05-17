@@ -3,9 +3,8 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
+I am a software engineer in Big Tech. Interested in performant software & how to use software to advance public policy. 
 
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+This website is powered by **[fastpages](https://github.com/fastai/fastpages)**.
+

@@ -108,7 +108,7 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="introduction">Introduction</h1>
+    <h1 id="introduction-">Introduction 👋🏽</h1>
 <p>This is a quick guide on how to deploy Explosion’s data annotation tool <a href="https://prodi.gy/">Prodigy</a>. This guide is meant as a reference &amp; assumes you know how to use Docker, Azure, and you know how to deploy/provision a database.</p>
 
 <p>If you get stuck check out the <a href="https://prodi.gy/docs">Prodigy docs</a> or post your question on <a href="https://support.prodi.gy/">Prodigy’s support forum</a>.</p>
@@ -134,7 +134,7 @@ window.onload = wrap_img;
 <span class="k">ENTRYPOINT</span><span class="s"> prodigy textcat.manual your_dataset_task_name ./root/your_data.jsonl  --label your_labels_go_here</span>
 </code></pre></div></div>
 
-<h2 id="prodigyjson-">Prodigy.json ⚙</h2>
+<h2 id="prodigyjson-">Prodigy.json 📚</h2>
 <p>Here is an example of how your prodigy.json might look like. I had problems with Azure Web Apps when not setting <code class="language-plaintext highlighter-rouge">"host": "0.0.0.0"</code>. Change db_settings to db of your choice, refer to Prodigy documentation for how to do so.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -152,18 +152,19 @@ window.onload = wrap_img;
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h1 id="deployment">Deployment</h1>
-<h2 id="prereqs">Prereqs</h2>
+<h1 id="deployment-">Deployment 🚀</h1>
+
+<h2 id="prereqs-">Prereqs ✅</h2>
 <ul>
   <li>Dockerfile (like the one above)</li>
   <li>Your database (deployed wherever it is)</li>
   <li>prodigy.json (this should be inside your image)</li>
 </ul>
 
-<h2 id="database">Database</h2>
+<h2 id="database-">Database 📁</h2>
 <p>Make sure you have your database configured beforehand. With prodigy you can have <em>multiple</em> instances running pointing to the <em>same</em> database working off of <em>different</em> datasets. You don’t need to spin up a new db with every image. Make sure your database accepts connections from the IP of your web app or the proper network permissions are in place. You will know your prodigy instance can connect to your database once you test it locally.</p>
 
-<h2 id="docker">Docker</h2>
+<h2 id="docker-">Docker 🐋</h2>
 <p>You want to build &amp; test your prodigy image, then push it to your container registry. For this tutorial we’re using Docker’s public container registry. Might be best to use a private registery so nobody can pull your image and annotate your data 😅</p>
 
 <ol>
@@ -178,7 +179,7 @@ window.onload = wrap_img;
   </li>
 </ol>
 
-<h2 id="azure-web-apps">Azure Web Apps</h2>
+<h2 id="azure-web-apps-">Azure Web Apps ⛅</h2>
 <p>Navigate to the resource group you want to use.</p>
 
 <ol>

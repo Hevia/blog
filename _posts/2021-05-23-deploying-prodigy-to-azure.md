@@ -90,7 +90,7 @@ Navigate to the resource group you want to use.
 
 8. Add a new application setting
 
-9. Name it `WEBSITES_PORT` and set the value to be the same port number as the `PRODIGY_PORT` in your Dockerfile. So for example in our case `WEBSITES_PORT` would be set to `8000`
+9. **IMPORTANT!** Name it `WEBSITES_PORT` and set the value to be the same port number as the `PRODIGY_PORT` in your Dockerfile. So for in our example `WEBSITES_PORT` would be set to `8000`. If you forget to set this application setting, I have found prodigy not to work/load. 
 
 10. Save & restart your Web App
 

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Deploying Prodigy to Azure using Docker | Programming &amp; Public Policy</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Deploying Prodigy to Azure using Docker" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A quick guide on how to deploy the Prodigy data labeling tool to Azure Web Apps using Docker" />
+<meta property="og:description" content="A quick guide on how to deploy the Prodigy data labeling tool to Azure Web Apps using Docker" />
+<link rel="canonical" href="https://hevia.github.io/blog/python/nlp/prodigy/azure/postgresql/docker/2021/05/23/deploying-prodigy-to-azure.html" />
+<meta property="og:url" content="https://hevia.github.io/blog/python/nlp/prodigy/azure/postgresql/docker/2021/05/23/deploying-prodigy-to-azure.html" />
+<meta property="og:site_name" content="Programming &amp; Public Policy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-23T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://hevia.github.io/blog/python/nlp/prodigy/azure/postgresql/docker/2021/05/23/deploying-prodigy-to-azure.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://hevia.github.io/blog/python/nlp/prodigy/azure/postgresql/docker/2021/05/23/deploying-prodigy-to-azure.html"},"headline":"Deploying Prodigy to Azure using Docker","dateModified":"2021-05-23T00:00:00-05:00","datePublished":"2021-05-23T00:00:00-05:00","description":"A quick guide on how to deploy the Prodigy data labeling tool to Azure Web Apps using Docker","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hevia.github.io/blog/feed.xml" title="Programming &amp; Public Policy" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Programming &amp; Public Policy</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Deploying Prodigy to Azure using Docker</h1><p class="page-description">A quick guide on how to deploy the Prodigy data labeling tool to Azure Web Apps using Docker</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-23T00:00:00-05:00" itemprop="datePublished">
+        May 23, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#python">python</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#nlp">nlp</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#prodigy">prodigy</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#azure">azure</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#postgresql">postgresql</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#docker">docker</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="introduction">Introduction</h1>
+<p>This is a quick guide on how to deploy Explosion’s data annotation tool <a href="https://prodi.gy/">Prodigy</a>. This guide is meant as a reference &amp; assumes you know how to use Docker, Azure, and you know how to deploy/provision a database.</p>
+
+<p>If you get stuck check out the <a href="https://prodi.gy/docs">Prodigy docs</a> or post your question on <a href="https://support.prodi.gy/">Prodigy’s support forum</a>.</p>
+
+<h2 id="prodigy-docker-container-">Prodigy Docker Container 🐳</h2>
+<p>Here is a sample image that will spin up your Prodigy server when ran (this is the same one I use for deployments)</p>
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> python:stretch</span>
+
+<span class="k">ENV</span><span class="s"> PYTHONUNBUFFERED 1</span>
+<span class="k">ENV</span><span class="s"> PRODIGY_PORT=8000 # This is important!!! Remember the port number for the Web App step</span>
+<span class="k">ENV</span><span class="s"> PRODIGY_LOGGING=verbose # I found the verbose logs helpful for debugging problems </span>
+
+<span class="k">COPY</span><span class="s"> *linux_x86_64.whl /root # This is your prodigy wheel thats given to you</span>
+<span class="k">RUN </span>pip <span class="nb">install</span> /root/prodigy<span class="k">*</span>.whl 
+<span class="k">RUN </span>python <span class="nt">-m</span> spacy download en_core_web_md <span class="c"># Download the language embeddings you need</span>
+<span class="k">RUN </span><span class="nb">mkdir</span> <span class="nt">-p</span> /root/.prodigy/ <span class="c"># store your config &amp; settings here</span>
+<span class="k">COPY</span><span class="s"> ProdigyLicenseKey.txt /root/.prodigy/</span>
+<span class="k">COPY</span><span class="s"> prodigy.json /root/.prodigy/prodigy.json # Your prodigy settings</span>
+<span class="k">COPY</span><span class="s"> ./your_data.jsonl /root/ # Your data</span>
+<span class="k">RUN </span>pip <span class="nb">install </span>psycopg2 <span class="c"># Install your database ORM/driver here + any additional installs. We're using postgreSQL </span>
+
+<span class="c"># Put your prodigy task</span>
+<span class="k">ENTRYPOINT</span><span class="s"> prodigy textcat.manual your_dataset_task_name ./root/your_data.jsonl  --label your_labels_go_here</span>
+</code></pre></div></div>
+
+<h2 id="prodigyjson-">Prodigy.json ⚙</h2>
+<p>Here is an example of how your prodigy.json might look like. I had problems with Azure Web Apps when not setting <code class="language-plaintext highlighter-rouge">"host": "0.0.0.0"</code>. Change db_settings to db of your choice, refer to Prodigy documentation for how to do so.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"feed_overlap"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"db"</span><span class="p">:</span><span class="w"> </span><span class="s2">"postgresql"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"db_settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"postgresql"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yourdatabase.postgres.database.azure.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"dbname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"postgres"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin-user@database-name"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thepassword"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h1 id="deployment">Deployment</h1>
+<h2 id="prereqs">Prereqs</h2>
+<ul>
+  <li>Dockerfile (like the one above)</li>
+  <li>Your database (deployed wherever it is)</li>
+  <li>prodigy.json (this should be inside your image)</li>
+</ul>
+
+<h2 id="database">Database</h2>
+<p>Make sure you have your database configured beforehand. With prodigy you can have <em>multiple</em> instances running pointing to the <em>same</em> database working off of <em>different</em> datasets. You don’t need to spin up a new db with every image. Make sure your database accepts connections from the IP of your web app or the proper network permissions are in place. You will know your prodigy instance can connect to your database once you test it locally.</p>
+
+<h2 id="docker">Docker</h2>
+<p>You want to build &amp; test your prodigy image, then push it to your container registry. For this tutorial we’re using Docker’s public container registry. Might be best to use a private registery so nobody can pull your image and annotate your data 😅</p>
+
+<ol>
+  <li>
+    <p>Build your prodigy: <code class="language-plaintext highlighter-rouge">docker build -t &lt;tag-name&gt; .</code></p>
+  </li>
+  <li>
+    <p>Test it locally: <code class="language-plaintext highlighter-rouge">docker run -p 8000:8000 &lt;tag-name&gt;</code></p>
+  </li>
+  <li>
+    <p>Push it to your container registry: <code class="language-plaintext highlighter-rouge">docker push &lt;tag-name&gt;</code></p>
+  </li>
+</ol>
+
+<h2 id="azure-web-apps">Azure Web Apps</h2>
+<p>Navigate to the resource group you want to use.</p>
+
+<ol>
+  <li>
+    <p>Follow Add -&gt; Marketplace -&gt; Web App.</p>
+  </li>
+  <li>On the Web App Creation Page under the <strong>Instance Details</strong> panel:
+    <ul>
+      <li>Select <code class="language-plaintext highlighter-rouge">Docker Container</code> for Publish</li>
+      <li>Select <code class="language-plaintext highlighter-rouge">Linux</code> for OS</li>
+    </ul>
+  </li>
+  <li>
+    <p>Configure everything else on this page for your needs.</p>
+  </li>
+  <li>
+    <p>On the Web App Docker page, configure it to pull from your Docker image. Make sure you don’t have any accidental spaces or misspellings (which has happened plenty of times to myself!)</p>
+  </li>
+  <li>
+    <p>Configure any other pages you need, but it is now good to hit <code class="language-plaintext highlighter-rouge">Review + create</code></p>
+  </li>
+  <li>
+    <p>Head over to your provisioned Web App resource</p>
+  </li>
+  <li>
+    <p>On the left side column panel. Navigate to Settings -&gt; Configuration -&gt; Application Settings</p>
+  </li>
+  <li>
+    <p>Add a new application setting</p>
+  </li>
+  <li>
+    <p>Name it <code class="language-plaintext highlighter-rouge">WEBSITES_PORT</code> and set the value to be the same port number as the <code class="language-plaintext highlighter-rouge">PRODIGY_PORT</code> in your Dockerfile. So for example in our case <code class="language-plaintext highlighter-rouge">WEBSITES_PORT</code> would be set to <code class="language-plaintext highlighter-rouge">8000</code></p>
+  </li>
+  <li>Save &amp; restart your Web App</li>
+</ol>
+
+<p>After some time, depending on the size of your container. You should be able to navigate to your URL &amp; start annotating!</p>
+
+  </div><a class="u-url" href="/blog/python/nlp/prodigy/azure/postgresql/docker/2021/05/23/deploying-prodigy-to-azure.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Personal blog for Anthony Hevia</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Hevia" title="Hevia"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/crumbrats" title="crumbrats"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li><li><a rel="me" href="https://www.youtube.com/channel%2FUCyokaec6yvsotHXFz9pbcaA" title="channel/UCyokaec6yvsotHXFz9pbcaA"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#youtube"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

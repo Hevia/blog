@@ -4,7 +4,7 @@ description: A quick guide on how to deploy the Prodigy data labeling tool to Az
 categories: [python, nlp, prodigy, azure, postgresql, docker]
 title: Deploying Prodigy to Azure using Docker
 ---
-# Introduction
+# Introduction 👋🏽
 This is a quick guide on how to deploy Explosion's data annotation tool [Prodigy](https://prodi.gy/). This guide is meant as a reference & assumes you know how to use Docker, Azure, and you know how to deploy/provision a database. 
 
 If you get stuck check out the [Prodigy docs](https://prodi.gy/docs) or post your question on [Prodigy's support forum](https://support.prodi.gy/).
@@ -32,7 +32,7 @@ RUN pip install psycopg2 # Install your database ORM/driver here + any additiona
 ENTRYPOINT prodigy textcat.manual your_dataset_task_name ./root/your_data.jsonl  --label your_labels_go_here
 ```
 
-## Prodigy.json ⚙
+## Prodigy.json 📚
 Here is an example of how your prodigy.json might look like. I had problems with Azure Web Apps when not setting `"host": "0.0.0.0"`. Change db_settings to db of your choice, refer to Prodigy documentation for how to do so. 
 
 ```json
@@ -51,16 +51,18 @@ Here is an example of how your prodigy.json might look like. I had problems with
 }
 ```
 
-# Deployment
-## Prereqs
+# Deployment 🚀
+
+
+## Prereqs ✅
 - Dockerfile (like the one above)
 - Your database (deployed wherever it is)
 - prodigy.json (this should be inside your image)
 
-## Database
+## Database 📁
 Make sure you have your database configured beforehand. With prodigy you can have *multiple* instances running pointing to the *same* database working off of *different* datasets. You don't need to spin up a new db with every image. Make sure your database accepts connections from the IP of your web app or the proper network permissions are in place. You will know your prodigy instance can connect to your database once you test it locally. 
 
-## Docker
+## Docker 🐋
 You want to build & test your prodigy image, then push it to your container registry. For this tutorial we're using Docker's public container registry. Might be best to use a private registery so nobody can pull your image and annotate your data 😅
 
 1. Build your prodigy: `docker build -t <tag-name> .`
@@ -69,7 +71,7 @@ You want to build & test your prodigy image, then push it to your container regi
 
 3. Push it to your container registry: `docker push <tag-name>`
 
-## Azure Web Apps
+## Azure Web Apps ⛅
 Navigate to the resource group you want to use.
 
 1. Follow Add -> Marketplace -> Web App.

@@ -14,6 +14,9 @@ While obvious ways of making your role more sustainable could be advocating for 
 
 # Carbon-Aware vs Carbon-Efficient 
 
+https://devblogs.microsoft.com/sustainable-software/vlc-energy-optimization-with-gpu/
+
+
 # So what can developers do? 👩🏽‍💻
 This section will impart some common wisdom for those in various developer roles. I won't be covering things like volunteering, "contribute to open source, or joining a climate tech company. Just action items you can implement in your day job.
 
@@ -27,14 +30,19 @@ If you think I missed something. Please feel free to contact me and let me know!
 ## Web & App Development 🌐
 Since this is the area I currently work in. I have a lot to say on the subject! One of the first improvements 
 
+https://devblogs.microsoft.com/sustainable-software/green-energy-efficient-progressive-web-apps/
+
 Some places you can measure the carbon footprint of your website:
-- 
+- [Website Carbon](https://www.websitecarbon.com/)
+- [Greenspector](http://mobile-efficiency-index.com/en/)
 
 Here is a non-exhaustive short list of ways you can reduce the environmental burden of your software:
 - Smaller JS bundles
 - Lazy loading
 - Use system default fonts
-- 
+- [Subset your fonts, load only the glyphs you need](https://www.afasterweb.com/2018/03/09/subsetting-fonts-with-glyphhanger/?utm_medium=email&utm_source=fershad)
+- If your site requires compute heavy loads from the client, consider using WASM for better performance
+- Ensure your website has a dark theme (helps save energy on OLED screens)
 
 
 &nbsp;

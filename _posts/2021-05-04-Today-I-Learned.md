@@ -5,6 +5,14 @@ categories: [TIL]
 title: Today I Learned
 sticky_rank: 1
 ---
+# May 30th, 2021
+- REE stands for Rare Earth Elements!
+- China mines, processes, & exports about 70% of the worlds REEs 
+- You can use a heat pump connected to wastewater facilites to heat/cool homes & buildings 
+- The National Park Service is now changing its strategy from conserving the parks to preparing for how it will change as climate change worsens
+- Fertilizers, from creation, to distribution account for almost 7% of GHG emissions worldwide in some models 
+-    
+
 
 # May 13th, 2021 🛴
 - Service Workers operate on threads separate from main

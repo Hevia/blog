@@ -9,12 +9,23 @@ sticky_rank: 1
 # June, 7th, 2012
 
 - The Navajo goverment has its own presidental elections!
+- Black on OLED screens is known to use less power because the LEDs that make up each pixel are off, whereas displaying white means the LEDs need to shine and consume power.
+- Google found that on its devices that using blue used 25 percent more power than green or red
+- In South Korea you are required by law to separate food scraps from your waste
+  - That food waste is either turned into compost, biofuel, or other products
+  - rotting food is a significant source of methane
+  - It took 16 years from the laws inception in 1997 to finally achieve widespread adoption of 95%
+  - The volume of food waste is still extremely high, which means 20-30% of the recycled byproduct goes unused
+- Cloudflare's removal of the _cfduid cookie reports a net savings of 35k tons of CO2 per year because of Cloudflare's operating scale
+- [Nonviolent protests are twice as likely to succeed as armed conflicts – and those engaging a threshold of 3.5% of the population have never failed to bring about change.](https://www.bbc.com/future/article/20190513-it-only-takes-35-of-people-to-change-the-world)
+- Carbon emissions at data centers are determined by four variables: server utilization rate, choice of electrical grid, power usage effectiveness and overall power consumption
+- Data Centers consumed 2% of electricity worldwide in 2019
 
 # May 30th, 2021
 
 - REE stands for Rare Earth Elements!
-- China mines, processes, & exports about 70% of the worlds REEs 
-- You can use a heat pump connected to wastewater facilites to heat/cool homes & buildings 
+- China mines, processes, & exports about 70% of the worlds REEs
+- You can use a heat pump connected to wastewater facilites to heat/cool homes & buildings
 - The National Park Service is now changing its strategy from conserving the parks to preparing for how it will change as climate change worsens
 - Fertilizers, from creation, to distribution account for almost 7% of GHG emissions worldwide in some models
 

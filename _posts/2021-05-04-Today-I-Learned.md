@@ -6,6 +6,10 @@ title: Today I Learned
 sticky_rank: 1
 ---
 
+# June 8th, 2021
+
+- dwdwd
+
 # June, 7th, 2012
 
 - The Navajo goverment has its own presidental elections!

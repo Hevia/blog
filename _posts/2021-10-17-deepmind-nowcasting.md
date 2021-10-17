@@ -2,7 +2,7 @@
 layout: post
 description: An overview of DeepMind's paper Skilful precipitation nowcasting using deep generative models of radar.
 categories: [ml, climate]
-title: [Paper Summary] Skilful precipitation nowcasting using deep generative models of radar
+title: Paper Summary - Skilful precipitation nowcasting using deep generative models of radar
 ---
 
 # Skilful precipitation nowcasting using deep generative models of radar

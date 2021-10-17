@@ -3,12 +3,9 @@ layout: post
 description: A collection of things I learned and found worth sharing. Sometimes with sources!
 categories: [TIL]
 title: Today I Learned
-sticky_rank: 1
 ---
 
-# June 8th, 2021
-
-- dwdwd
+I stopped maintaining this list. Not because I still don't try to learn something new everyday, but the cost of keeping it up felt like a chore. Maybe I'll find a way to revitalize it in the future!
 
 # June, 7th, 2012
 

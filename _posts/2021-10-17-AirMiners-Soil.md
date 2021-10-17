@@ -34,6 +34,8 @@ In short, many of these practices involve returning to a more harmonius way of l
 
 
 # Notes
+These are notes & highlights taken during my study. Should be noted that some of these bullet points might be copy/pasted from the articles themselves. 
+
 - Regenerative agriculture are a group of practices aimed at promoting soil health by restoring soil's organic carbon (SOC) levels 
 
 - No-till reduces soil erosion and encourages water to penerate soils. 
@@ -83,6 +85,14 @@ In short, many of these practices involve returning to a more harmonius way of l
 - Agroforestry protects soil from erosion. 
 
 - Silvopasture (agroforestry + livestock) increases weight gain of live stock & reduces stress. 
+
+- Soil Organic Matter -> SOM
+
+- The most common factor for converting SOM to SOC is called the van Bemmelen factor, which is 58%.
+
+- SOM% is a good indicator of future yields. More SOM%, higher yields. 
+
+- About 10% of SOC is lost annually. (Rule of thumb)
 
 # Open Questions
 - Are there any concerns with a loss of genetic diversity from trying to breed/engineer plants that can sequester carbon more efficiently? 

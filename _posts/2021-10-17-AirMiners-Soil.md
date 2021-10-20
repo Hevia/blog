@@ -1,6 +1,6 @@
 ---
 layout: post
-description: Notes, summary, and questions of how soil might work as a carbon removal solution.
+description: Notes, summary, and questions on how soil works as a carbon removal solution.
 categories: [soil, cdr, airminers]
 title: Soil as a carbon removal solution [AirMiners Bootup]
 ---

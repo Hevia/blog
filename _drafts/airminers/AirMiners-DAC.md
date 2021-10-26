@@ -16,7 +16,8 @@ These are notes & highlights taken during my study. Should be noted that some of
 
 - Air Contacters have to be wide to increase surface area for CO2 capture. 
 - No need to build DAC systems on farmable land.
-- We need
+- There is an estimated several thousand gigatons of geologic storage for CO2.
+- Most geologic storage is not at risk for storage.
 
 # Open Questions
 

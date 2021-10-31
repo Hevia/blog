@@ -44,8 +44,6 @@ These are notes & highlights taken during my study. Should be noted that some of
 - How can we use existing biowaste sources (food, waste, etc) as the feedstock for BECCS? (Especially biowaste from wastewater plants)
 - Could food waste also be a source of BECCS feedstock?
 
-# Memes
-![]({{ site.baseurl }}/images/assets/airminers/beccs_meme.jpg "BECCS Meme")
 # Sources
 - [Bio-Energy with Carbon Capture and Storage (BECCS)](https://www.youtube.com/watch?v=uUwKEkYbsx0)
 - [New maps pinpoint the potential for BECCS across the US](https://www.carbonbrief.org/new-maps-pinpoint-potential-beccs-across-us)

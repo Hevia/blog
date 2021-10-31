@@ -9,14 +9,18 @@ title: Direct Air Capture as a carbon removal solution [AirMiners Bootup]
 This blog post is an overview of what I learned from [Module 5 of Carbon Removal Academy](http://climatechangeacademy.com/courses/carbon-removal/5) while going through the [AirMiners BootUp program](https://bootup.airminers.org/).
 
 # Overview
-Direct Air Caputre (DAC) is one of the sections I was most excited about
+Direct Air Caputre (DAC) is one of the sections I was most excited about. Sadly I also couldn't put as much time as I wanted to thuis
 
 Pros:
 - Permance is very high. Storing CO2 underground works very well!
 - The variety of material & approaches is high. 
+- Land usage effectiveness is quite good. You can sequester a lot of carbon for little land
+- US has well mapped out geologic storage capacity. 
 
 Cons:
 - $ per ton is still very expensive. It will likely be some time before its brought down to the goal $100/ton
+- Facilities require a high costs
+    - Maintence, materials, energy usage, etc
 
 # Notes
 These are notes & highlights taken during my study. Should be noted that some of these bullet points might be copy/pasted from the articles themselves. 
@@ -48,8 +52,8 @@ These are notes & highlights taken during my study. Should be noted that some of
     - Which means inserting CO2 into the ground is not a 1:1 match. We must insert more then we have emitted.
 
 # Open Questions
-
-# Memes
+- Is there any work being done in new material discovery? 
+    - I'm thinking of the something similar to the work done in drug discovery, trying to use algorithims to automate the search process for new materials. 
 
 # Sources
 - [A New Way To Remove CO2 From the Atmosphere](https://www.ted.com/talks/jennifer_wilcox_a_new_way_to_remove_co2_from_the_atmosphere)

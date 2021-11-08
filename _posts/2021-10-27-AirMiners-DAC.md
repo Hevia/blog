@@ -1,7 +1,7 @@
 ---
 layout: post
 description: Notes, summary, and questions on how DAC works as a carbon removal solution.
-categories: [dac]
+categories: [dac, airminers]
 title: Direct Air Capture as a carbon removal solution [AirMiners Bootup]
 ---
 

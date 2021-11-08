@@ -1,7 +1,7 @@
 ---
 layout: post
 description: Notes, summary, and questions on how Mineralization works as a carbon removal solution.
-categories: [minerals]
+categories: [minerals, airminers]
 title: Mineralization and Geologic Sequestration as a carbon removal solution [AirMiners Bootup]
 ---
 

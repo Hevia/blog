@@ -1,7 +1,7 @@
 ---
 layout: post
 description: Notes, summary, and questions on how CO2u works as a carbon removal solution.
-categories: [co2u]
+categories: [co2u, airminers]
 title: Carbon Utilization as a carbon removal solution [AirMiners Bootup]
 ---
 
@@ -14,12 +14,7 @@ This was a module I had no clue I would enjoy so much. My initial impression was
 
 Actually managed to go through all the sources for this module 😅. Lots of notes!
 
-Pros:
-
-Cons:
-
-
-Really important 
+Important chart to highlight different utilization pathways:
 ![]({{ site.baseurl }}/images/assets/airminers/cdr-primer-table-5-2-lt.png "CDR Primer Pathway chart")
 
 
@@ -98,8 +93,6 @@ federal research and development.
 - How can captured CO2 accelerate the growth of algae?
 - Could we deploy "microcapture" facilites spread across the US & near plants that require a CO2 feedstock? Especially if these facilities could be mobile. Could help address concerns of transporting captured CO2. 
 - How much does carbon capture & utilization play a role in the greenwashing of oil giants?
-
-# Memes
 
 # Sources
 - [These uses of CO2 could cut emissions — and make trillions of dollars](https://www.vox.com/energy-and-environment/2019/11/13/20839531/climate-change-industry-co2-carbon-capture-utilization-storage-ccu)

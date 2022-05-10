@@ -15,8 +15,8 @@ Where these two tasks diverge is the nature of their inputs. For scientific clai
 
 | Type      | Example |
 | ----------- | ----------- |
-| Decontextualized      | Dogs are mammals. |
-| Not Decontextualized   | Dogs are mammals and have four legs. |  
+| Decontextualized      | Earthquakes happen because of the movement of tectonic plates. |
+| Not Decontextualized   | As per the sentence previous, we know what causes earthquakes to happen. |  
 
 
 

@@ -2,7 +2,7 @@
 layout: post
 description: Notes, summary, and questions on how coastal carvon works as a carbon removal solution.
 categories: [blue, cdr, airminers]
-title: Coastal Blue Carbon and Seaweed Cultivation as a carbon removal solution [AirMiners Bootup]
+title: Coastal Ecosystems role in removing carbon 🏖️ [AirMiners Bootup]
 ---
 
 # Coastal Blue Carbon and Seaweed Cultivation

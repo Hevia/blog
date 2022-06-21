@@ -2,7 +2,7 @@
 layout: post
 description: A quick guide on how to deploy the Prodigy data labeling tool to Azure Web Apps using Docker
 categories: [python, nlp, prodigy, azure, postgresql, docker]
-title: Deploying Prodigy to Azure using Docker
+title: Deploying Prodigy to Azure using Docker 🐋
 ---
 # Introduction 👋🏽
 This is a quick guide on how to deploy Explosion's data annotation tool [Prodigy](https://prodi.gy/). This guide is meant as a reference & assumes you know how to use Docker, Azure, and you know how to deploy/provision a database. 

@@ -2,7 +2,7 @@
 layout: post
 description: Notes, summary, and questions on how oceans work as a carbon removal solution.
 categories: [ocean, airminers]
-title: Oceans as a carbon removal solution [AirMiners Bootup]
+title: Removing carbon using our oceans 🌊 [AirMiners Bootup]
 ---
 
 # Ocean CDR

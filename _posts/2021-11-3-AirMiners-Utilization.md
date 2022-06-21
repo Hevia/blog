@@ -2,7 +2,7 @@
 layout: post
 description: Notes, summary, and questions on how CO2u works as a carbon removal solution.
 categories: [co2u, airminers]
-title: Carbon Utilization as a carbon removal solution [AirMiners Bootup]
+title: Using captured carbon to make products 🏭🥅 [AirMiners Bootup]
 ---
 
 # Carbon Utilization

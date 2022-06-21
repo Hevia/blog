@@ -2,7 +2,7 @@
 layout: post
 description: Notes, summary, and questions on how forests works as a carbon removal solution.
 categories: [beccs, cdr, airminers]
-title: Biomass, BECCS and Biochar as a carbon removal solution [AirMiners Bootup]
+title: Biomass & Biochar 🍃🌾[AirMiners Bootup]
 ---
 
 # Biomass: BECCS and Biochar

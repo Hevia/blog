@@ -2,7 +2,7 @@
 layout: post
 description: Notes, summary, and questions on how forests works as a carbon removal solution.
 categories: [forests, cdr, airminers]
-title: Forests as a carbon removal solution [AirMiners Bootup]
+title: Forests as a carbon removal solution 🌲 [AirMiners Bootup]
 ---
 
 # Forests

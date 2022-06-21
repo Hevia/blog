@@ -2,7 +2,7 @@
 layout: post
 description: Notes, summary, and questions on how oceans work as a carbon removal solution.
 categories: [airminers]
-title: Carbon Markets as a carbon removal solution [AirMiners Bootup]
+title: Carbon Markets 🤑🏭 [AirMiners Bootup]
 ---
 
 # Carbon Markets

@@ -2,7 +2,7 @@
 layout: post
 description: I am now justified in all the time I spent learning about  climate conspiracies. 
 categories: [misinformation, climate]
-title: Crafting prompts to tease out climate misinformation from GPT-3 🤯
+title: Prompting climate misinformation from GPT-3 🤯
 ---
 # Introduction
 Ever since OpenAI widen access to GPT-3 API I've had a lot of fun toying with it. Most of time I've spent for goofs with friends, but after reading about some of the safety measures OpenAI had taken. I wondering if less common climate myths were overlooked or not in that safety calculation.

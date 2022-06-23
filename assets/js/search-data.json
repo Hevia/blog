@@ -194,7 +194,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "Hello There 👋🏽 . I’m a software engineer at Microsoft, I live in the Pacific Northwest, but I am originally from the swamps of South Florida. 🇨🇺 . I also write a short weekly newsletter about NLP: https://nlprompt.substack.com/ (I promise it highlights cool stuff!) . I like &amp; will occassionally post about: . NLP | Machine Learning | Trustworthy ML | Knowledge graphs | Scientific NLP | Python | MLOps | Representation in tech | Tools to improve day to day developer experience | Addressing Climate Change | Systems of governance to tackle online misinformation | Rust | Public Transportation | Climbing | Skiing | Diving | Mountaineering | Typescript | React | . I use fastpages for the blog .",
+          "content": "Hello There 👋🏽 . I’m a software engineer at Microsoft, I live in the Pacific Northwest, but I am originally from the swamps of South Florida. . I also write a short semi-regular newsletter about NLP . I like &amp; will occassionally post about: . NLP | Machine Learning | Trustworthy ML | Knowledge graphs | Scientific NLP | Python | MLOps | Representation in tech | Tools to improve day to day developer experience | Addressing Climate Change | Systems of governance to tackle online misinformation | Rust | Public Transportation | Climbing | Skiing | Diving | Mountaineering | Typescript | React | . I use fastpages for the blog .",
           "url": "https://hevia.github.io/blog/about/",
           "relUrl": "/about/",
           "date": ""

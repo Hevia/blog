@@ -61,7 +61,7 @@ Python has a unique feature that is pretty uncommon in most languages. Only one 
 
 ## Oh My GIL 😱
 The reason only one thread can run at a time in Python is thanks to the Global Interpreter Lock (GIL, also recall Python is an *interpretered* hence the name). While many cite the GIL as the source of all their problems, 
-working with multiple threads in large applications is *hard*. Writing multithreaded code introduces a whole new slew of bugs such as data races, deadlocking, & heseinbugs. (However, it doesn't fully protect you. We'll explore this in later posts!)
+working with [multiple threads](https://www.scaler.com/topics/multithreading-in-python/) in large applications is *hard*. Writing multithreaded code introduces a whole new slew of bugs such as data races, deadlocking, & heseinbugs. (However, it doesn't fully protect you. We'll explore this in later posts!)
 The GIL is saving your future self a lot of time. 
 
 So *true* multithreading is not really possible in Python, you can run multiple threads, but only one of them is ever actually doing anything at any given time. The rest idle by while its their time off the bench. However! You can still achieve parallel code execution, using **processes**! 

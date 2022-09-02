@@ -2,7 +2,7 @@
 layout: post
 description: Curious about green software engineering? This post covers the common terms & how developers can take action against the climate crisis with just their day jobs. 
 categories: [green software, sustainability, sse]
-title: An introduction to Sustainable/Green Software Engineering
+title: An introduction to Green Software Engineering 🥬🧑🏽‍💻
 ---
 
 # Introduction 👋🏽

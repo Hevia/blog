@@ -2,7 +2,7 @@
 layout: post
 description: A rapid introduction to some of the most useful set of programming skills
 categories: [python, concurrency, parallelism, multithreading]
-title: Concurrency & Parallelism with Python in 5 minutes
+title: Concurrency & Parallelism with Python in 5 minutes 🐍🏃🏽‍♂️
 ---
 
 

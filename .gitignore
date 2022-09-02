@@ -8,6 +8,8 @@ _site
 *.xml
 vendor
 _notebooks/.ipynb_checkpoints
+venv/
+.ipynb_checkpoints/
 # Local Netlify folder
 .netlify
 .tweet-cache

@@ -4,19 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>How to create your own Word2Vec model for your domain | A Very Normal Programming Blog</title>
+<title>How to create your own Word2Vec model for your domain 🧠 | A Very Normal Programming Blog</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="How to create your own Word2Vec model for your domain" />
+<meta property="og:title" content="How to create your own Word2Vec model for your domain 🧠" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Personal blog for Anthony Hevia" />
 <meta property="og:description" content="Personal blog for Anthony Hevia" />
-<link rel="canonical" href="https://hevia.github.io/blog/2022/10/03/gensim_tutorial.html" />
-<meta property="og:url" content="https://hevia.github.io/blog/2022/10/03/gensim_tutorial.html" />
+<link rel="canonical" href="https://hevia.github.io/blog/2022/10/04/gensim_tutorial.html" />
+<meta property="og:url" content="https://hevia.github.io/blog/2022/10/04/gensim_tutorial.html" />
 <meta property="og:site_name" content="A Very Normal Programming Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-10-03T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-10-04T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2022-10-03T00:00:00-05:00","url":"https://hevia.github.io/blog/2022/10/03/gensim_tutorial.html","@type":"BlogPosting","headline":"How to create your own Word2Vec model for your domain","dateModified":"2022-10-03T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hevia.github.io/blog/2022/10/03/gensim_tutorial.html"},"description":"Personal blog for Anthony Hevia","@context":"https://schema.org"}</script>
+{"datePublished":"2022-10-04T00:00:00-05:00","url":"https://hevia.github.io/blog/2022/10/04/gensim_tutorial.html","@type":"BlogPosting","headline":"How to create your own Word2Vec model for your domain 🧠","dateModified":"2022-10-04T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hevia.github.io/blog/2022/10/04/gensim_tutorial.html"},"description":"Personal blog for Anthony Hevia","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hevia.github.io/blog/feed.xml" title="A Very Normal Programming Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,13 +71,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">How to create your own Word2Vec model for your domain</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-03T00:00:00-05:00" itemprop="datePublished">
-        Oct 3, 2022
+    <h1 class="post-title p-name" itemprop="name headline">How to create your own Word2Vec model for your domain 🧠</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-04T00:00:00-05:00" itemprop="datePublished">
+        Oct 4, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -114,13 +114,14 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-are-word-embeddings?">What are word embeddings?<a class="anchor-link" href="#What-are-word-embeddings?"> </a></h2><h2 id="Why-should-you-care?">Why should you care?<a class="anchor-link" href="#Why-should-you-care?"> </a></h2>
+<h2 id="What-are-word-embeddings?-&#129300;">What are word embeddings? &#129300;<a class="anchor-link" href="#What-are-word-embeddings?-&#129300;"> </a></h2><h2 id="Why-should-you-care?-&#129300;">Why should you care? &#129300;<a class="anchor-link" href="#Why-should-you-care?-&#129300;"> </a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-is-Gensim?">What is Gensim?<a class="anchor-link" href="#What-is-Gensim?"> </a></h2><h2 id="Tutorial-versions">Tutorial versions<a class="anchor-link" href="#Tutorial-versions"> </a></h2><p>Just so you can follow along for reproducibility reasons, here are the versions for Python &amp; the packages:</p>
+<h2 id="What-is-Gensim?-&#129300;">What is Gensim? &#129300;<a class="anchor-link" href="#What-is-Gensim?-&#129300;"> </a></h2><p><a href="https://radimrehurek.com/gensim/">Gensim</a> is a Python library developed by <a href="https://rare-technologies.com/">RaRe Technologies</a> that makes training a wide variety of topic models very easy.</p>
+<h2 id="Tutorial-versions-&#128290;">Tutorial versions &#128290;<a class="anchor-link" href="#Tutorial-versions-&#128290;"> </a></h2><p>Just so you can follow along for reproducibility reasons, here are the versions for Python &amp; the packages:</p>
 <ul>
 <li>Python:</li>
 <li>Gensim:</li>
@@ -132,7 +133,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Preparing-our-data">Preparing our data<a class="anchor-link" href="#Preparing-our-data"> </a></h1>
+<h1 id="Preparing-our-data-&#128105;&#127997;&#8205;&#127859;">Preparing our data &#128105;&#127997;&#8205;&#127859;<a class="anchor-link" href="#Preparing-our-data-&#128105;&#127997;&#8205;&#127859;"> </a></h1>
 </div>
 </div>
 </div>
@@ -143,10 +144,17 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">gensim.models</span>
-<span class="kn">from</span> <span class="nn">gensim.parsing.preprocessing</span> <span class="kn">import</span> <span class="n">remove_stopwords</span><span class="p">,</span> <span class="n">strip_multiple_whitespaces</span><span class="p">,</span> <span class="n">strip_punctuation</span>
-<span class="kn">import</span> <span class="nn">json</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The core import for Word2Vec</span>
+<span class="kn">import</span> <span class="nn">gensim.models</span>
+
+<span class="c1"># We&#39;ll be using these imports during our text cleaning</span>
+<span class="kn">from</span> <span class="nn">gensim.parsing.preprocessing</span> <span class="kn">import</span> <span class="n">remove_stopwords</span><span class="p">,</span> <span class="n">strip_multiple_whitespaces</span><span class="p">,</span> <span class="n">strip_punctuation</span> 
 <span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># Our data is stored in jsonl format</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Used later to show off words from our trained model</span>
 <span class="kn">import</span> <span class="nn">random</span>
 </pre></div>
 
@@ -166,10 +174,10 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">papers</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">root_path</span> <span class="o">=</span> <span class="s2">&quot;./data/&quot;</span>
-<span class="n">sample_data</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;weather_CO2.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;paleoclimate.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;rewilding.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;rockfish.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;arctic.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;climate.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;shark_climate.jsonl&quot;</span><span class="p">]</span>
+<span class="n">file_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;weather_CO2.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;paleoclimate.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;rewilding.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;rockfish.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;arctic.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;climate.jsonl&quot;</span><span class="p">,</span> <span class="s2">&quot;shark_climate.jsonl&quot;</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">data_path</span> <span class="ow">in</span> <span class="n">sample_data</span><span class="p">:</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">root_path</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">file_names</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">root_path</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
         <span class="n">json_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span>
 
     <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -194,7 +202,26 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">papers</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span><span class="p">[</span><span class="s2">&quot;abstract&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">papers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># There are a lot of fields we don&#39;t need for this tutorial. We just want the abstract.</span>
+<span class="c1"># So all we&#39;re doing here is removing all entries in our data with a null abstract, and making a list of abstracts for easy processing.</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">papers</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span><span class="p">[</span><span class="s2">&quot;abstract&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
 <span class="n">abstracts</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;abstract&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">abstracts</span><span class="p">)</span>
 </pre></div>
@@ -223,6 +250,29 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that we've loaded our data. We can move forward with the most important part of cleaning our data.</p>
+<p>✨preprocessing✨</p>
+<p>This is where your domain specific knowledge comes in. Do not be fooled with how easy this seems! This is a process that takes some time to get right. Tutorials can trick you with how easy this might seem, but alas that is not the case.</p>
+<p>We're working with scientific text, so let us consider the goals of this process:</p>
+<ul>
+<li>We want to keep scientific terms, so avoid removing any rare or uncommon words.</li>
+<li>Stopwords (the, we, and, etc) can safely be removed because their inclusion doesn't impact the meaning of our data. It also means less words for our model to be trained on.</li>
+<li>Since authors can be inconsistent when captializing words (co2 vs CO2). Let's lowercase everything so the same words aren't treated differently.</li>
+<li>The punctuation looked at me funny. So let's remove it because we don't need it.</li>
+<li>I am from the future, so I know that after perfoming some of the operations above, we ended up with a lot of whitespace. Let's make sure to remove any extra!</li>
+</ul>
+<p>There are a few other ways we can improve this process, we won't show them in the tutorial, but here are some ideas:</p>
+<ul>
+<li>Climate Change is treated as two separate words (climate &amp; change), but we often think of this as a single "concept". Most NLP methods define a word as a string of letters, separated by whitespace. This method won't work for all languages, but it also doesn't work for all domains. Linguistics also has another definition for a word as anything that encaptures a single semantic concept. So in our case: Climate Change or </li>
+<li>You can use a statistical tokenizer (like the ones used by Transformer models) along with minor cleaning to prepare your text.</li>
+</ul>
+<p>Text cleaning is also a never "finished" step. You can forever tinker here to better capture your domain in the embedding space. We're going to consider this good enough for now though 😉.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -267,7 +317,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Training-&amp;-saving-our-model">Training &amp; saving our model<a class="anchor-link" href="#Training-&amp;-saving-our-model"> </a></h1>
+<h1 id="Training-&amp;-saving-our-model-&#127947;&#127997;">Training &amp; saving our model &#127947;&#127997;<a class="anchor-link" href="#Training-&amp;-saving-our-model-&#127947;&#127997;"> </a></h1>
 </div>
 </div>
 </div>
@@ -323,6 +373,13 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now let us load our newly trained model to see if it still works.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -344,7 +401,14 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Visualize-our-embeddings">Visualize our embeddings<a class="anchor-link" href="#Visualize-our-embeddings"> </a></h1>
+<p>Perfect! Let's move forward with visualizing our new embedding space. 😁</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Visualize-our-embeddings-&#128064;">Visualize our embeddings &#128064;<a class="anchor-link" href="#Visualize-our-embeddings-&#128064;"> </a></h1>
 </div>
 </div>
 </div>
@@ -352,7 +416,7 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/blog/2022/10/03/gensim_tutorial.html" hidden></a>
+  </div><a class="u-url" href="/blog/2022/10/04/gensim_tutorial.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">

@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Personal blog for Anthony Hevia" />
 <meta property="og:description" content="Personal blog for Anthony Hevia" />
-<link rel="canonical" href="https://hevia.github.io/blog/2022/10/04/gensim_tutorial.html" />
-<meta property="og:url" content="https://hevia.github.io/blog/2022/10/04/gensim_tutorial.html" />
+<link rel="canonical" href="https://hevia.github.io/blog/2022/10/05/gensim_tutorial.html" />
+<meta property="og:url" content="https://hevia.github.io/blog/2022/10/05/gensim_tutorial.html" />
 <meta property="og:site_name" content="A Very Normal Programming Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-10-04T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-10-05T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2022-10-04T00:00:00-05:00","url":"https://hevia.github.io/blog/2022/10/04/gensim_tutorial.html","@type":"BlogPosting","headline":"How to create your own Word2Vec model for your domain 🧠","dateModified":"2022-10-04T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hevia.github.io/blog/2022/10/04/gensim_tutorial.html"},"description":"Personal blog for Anthony Hevia","@context":"https://schema.org"}</script>
+{"datePublished":"2022-10-05T00:00:00-05:00","url":"https://hevia.github.io/blog/2022/10/05/gensim_tutorial.html","@type":"BlogPosting","headline":"How to create your own Word2Vec model for your domain 🧠","dateModified":"2022-10-05T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hevia.github.io/blog/2022/10/05/gensim_tutorial.html"},"description":"Personal blog for Anthony Hevia","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hevia.github.io/blog/feed.xml" title="A Very Normal Programming Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,8 +71,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">How to create your own Word2Vec model for your domain 🧠</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-04T00:00:00-05:00" itemprop="datePublished">
-        Oct 4, 2022
+    <h1 class="post-title p-name" itemprop="name headline">How to create your own Word2Vec model for your domain 🧠</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-05T00:00:00-05:00" itemprop="datePublished">
+        Oct 5, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -264,7 +264,7 @@ window.onload = wrap_img;
 </ul>
 <h3 id="Exploring-other-ideas-&#128640;">Exploring other ideas &#128640;<a class="anchor-link" href="#Exploring-other-ideas-&#128640;"> </a></h3><p>There are a few other ways we can improve this process, we won't show them in the tutorial, but here are some ideas:</p>
 <ul>
-<li>Climate Change is treated as two separate words (climate &amp; change), but we often think of this as a single "concept". Most NLP methods define a word as a string of letters, separated by whitespace. This method won't work for all languages, but it also doesn't work for all domains. <ul>
+<li>Phrase Matching: Climate Change is treated as two separate words (climate &amp; change), but we often think of this phrase as a single "concept". Most NLP methods define a word as a string of letters, separated by whitespace. This method won't work for all languages, but it also doesn't work for all domains. <ul>
 <li>Linguistics also has another definition for a word as anything that encaptures a single semantic concept. <ul>
 <li>So in our case: Climate Change or Sebastes ruberrimus (the scientific name for Yellow Rockfish). You can combine them into a single word for processing by replacing the space with a hyphen or concat them together:<ul>
 <li>Climate change becomes climate-change or climateChange, etc</li>
@@ -439,7 +439,7 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/blog/2022/10/04/gensim_tutorial.html" hidden></a>
+  </div><a class="u-url" href="/blog/2022/10/05/gensim_tutorial.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">

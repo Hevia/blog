@@ -5,11 +5,9 @@ permalink: /about/
 ---
 Hello There 👋🏽
 
-I'm a software engineer at Microsoft, I live in the Pacific Northwest, but I am originally from the swamps of South Florida. 
+I'm a software engineer at Microsoft, I live in the Pacific Northwest, but I am originally from the swamps of Florida. 
 
-I also write a [short semi-regular newsletter about NLP](https://nlprompt.substack.com/)
-
-I like & will occassionally post about:
+Things I like:
 - NLP
 - Machine Learning
 - Trustworthy ML
